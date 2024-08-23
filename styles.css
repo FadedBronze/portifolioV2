@@ -1,0 +1,509 @@
+body {
+  background-color: black;
+  display: flex;
+  color: var(--color-secondary-text);
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes scrollanim {
+  to {
+    scale: 10.02 1;
+  }
+}
+
+body::after {
+  content: "";
+  transform-origin: left;
+  scale: 0 1;
+  position: fixed;
+  height: 0.5rem;
+  width: 10%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  animation: scrollanim;
+  animation-timeline: scroll();
+}
+
+header {
+  position: sticky;
+  padding: 3rem min(3rem, var(--base-padding)) 3rem var(--base-padding);
+  height: calc(100vh - 6rem);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header > .intro > span {
+  display: block;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+header > .intro > h1 {
+  margin-bottom: -0.55rem;
+  color: white;
+}
+
+header > .intro > h2 {
+  color: var(--color-secondary-text);
+}
+
+header > nav > a:hover {
+  transition: transform 250ms;
+  transform: translateX(1rem);
+}
+
+header > nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+header > nav > a {
+  padding: 1rem;
+  margin: -1rem;
+  transition: transform 250ms;
+  transform: translateX(0rem);
+  line-height: 0.9;
+  text-decoration: none;
+  color: var(--color-secondary-text);
+}
+
+header > .external {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header > .external img {
+  width: 1.5rem;
+}
+
+header > .external > a, header > .external > span {
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+main {
+  padding: 3rem var(--base-padding) 3rem 0;
+}
+
+main > section > h1 {
+  color: white;
+  margin-bottom: calc(3rem - 1rem);
+  position: relative;
+  padding-top: 0.3rem;
+  display: flex;
+  white-space: nowrap;
+  max-width: 20rem;
+}
+
+main > section > h1::after {
+  content: "_ _ _ _";
+  width: 100%;
+  margin-top: -0.6rem;
+  margin-left: 1.25rem;
+  color: var(--color-secondary-text);
+}
+
+main > section > span {
+  display: block;
+  margin-bottom: 0.375rem;
+  color: var(--color-primary);
+  margin-top: 4rem;
+}
+
+main > img {
+  position: fixed;
+  z-index: -10;
+  right: 0;
+  top: 0;
+  scale: 1.4;
+}
+
+#intro > span {
+  margin-top: 0;
+}
+
+#intro > p {
+  color: var(--color-secondary-text);  
+}
+
+#projects h2 {
+  color: white;
+  margin-bottom: calc(1rem - 0.3rem);
+}
+
+#projects > article > ul > li {
+  color: var(--color-primary);
+}
+
+#projects > article > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+#projects > article figcaption {
+}
+
+#projects > aside {
+  width: 100%;
+}
+
+#projects > aside div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  overflow: hidden;
+  transition: 250ms filter;
+  cursor: pointer;
+} 
+
+#projects > aside div a {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+#projects > aside div img:not(:hover) {
+  transition: 250ms filter, 500ms transform;
+  filter: grayscale(100%) brightness(0.6) sepia(100%) hue-rotate(-55deg) saturate(500%);
+  transform: scale(1.5);
+}
+
+#projects > aside div img {
+  transition: 250ms filter, 500ms transform;
+  filter: grayscale(0%);
+  transform: scale(1.0);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#projects > article a > img {
+  height: 1rem;
+  transform: translateY(0.15rem);
+}
+
+#projects figure {
+  display: block;
+  width: 100%;
+  height: 16rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#projects figure > img {
+  object-fit: cover;
+  width: 100%;
+  height: 16rem;
+}
+
+#projects > article a {
+  display: inline-block;
+  border: 1px solid white;
+  box-sizing: content-box;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+#projects > article a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  transition: 250ms ease-in transform;
+  transform-origin: left;
+  backdrop-filter: invert(1.0);
+  transform: translateX(-75%) skew(5deg);
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+#projects > article a:hover::after {
+  transition: 250ms ease-out transform;
+  transform: translateX(-75%) skew(5deg) scaleX(16.0);
+}
+
+#projects > article {
+  margin-bottom: 3rem;
+}
+
+#projects > article p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: white;
+}
+
+#intro > p:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+#hackathons input {
+  display: none;
+}
+
+#hackathons label span {
+  display: block;
+}
+
+#hackathons input:checked + article + label * {
+  transform-origin: left;
+  transition: 250ms transform;
+  transform: scale(1.1);
+}
+
+#hackathons label :nth-child(2) {
+  color: var(--color-primary-dark);
+}
+
+#hackathons label {
+  position: relative;
+  color: var(--color-primary);
+}
+
+#hackathons label::after {
+  transition: 250ms width;
+  width: 15px;
+}
+
+#hackathons input:checked + article + label::after {
+  width: 25px;
+  border-radius: 2px 0px 0px 2px;
+}
+
+#hackathons label:hover::after {
+  transition: 250ms width;
+  border-radius: 2px 0px 0px 2px;
+  width: 20px;
+}
+
+#hackathons label::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-primary);
+}
+
+#hackathons input + article {
+  opacity: 0.5;
+  display: none;
+}
+
+#hackathons input:checked + article {
+  display: block;
+  opacity: 1;
+  grid-row: 1 / span 3;
+  grid-column: 2 / span 2;
+}
+
+#hackathons > div {
+  display: grid;
+  gap: 0 2rem;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 20rem;
+}
+
+#hackathons article > h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+#hackathons article > p {
+  margin-bottom: 0.5rem;
+}
+
+#more > nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  height: 24rem;
+  gap: 0.5rem;
+}
+
+#more > nav * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#more > nav > *::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  top: 50%;
+  left: 50%;
+  backdrop-filter: invert(1.0) grayscale(0.8);
+  transition: transform 1s;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#more > nav > *:hover::after {
+  transition: transform 1s;
+  transform: translate(-50%, -50%) scale(100);
+  cursor: pointer;
+}
+
+#more > nav :nth-child(1) {
+  grid-row: span 2;
+  background-color: var(--color-ambient);
+  color: white;
+}
+
+#more > nav :nth-child(3) {
+  background-color: white;
+  color: var(--color-ambient);
+}
+
+#more > nav :nth-child(4) {
+  background-color: white;
+  color: var(--color-ambient);
+}
+
+#more > nav :nth-child(5) {
+  grid-row: span 2;
+  background-color: var(--color-ambient);
+  color: white;
+}
+
+#more > nav :nth-child(6) {
+  grid-column: span 2;
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --base-padding: 4rem
+  }
+}
+@media (max-width: 1100px) {
+  :root {
+    --base-padding: 2rem
+  }
+  #projects > article a {
+    padding: 0.60rem 0.362rem 0.55rem 0.362rem;
+    font-size: 0.75rem;
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+  #projects > article a img {
+    margin-top: -0.3rem;
+  }
+}
+
+@media (max-width: 900px) { 
+  #projects > article a {
+    padding: 1.0rem;
+  }
+  #projects figure {
+    display: block;
+    height: 28rem;
+  }
+  #projects figure > img {
+    height: 16rem;
+    margin-bottom: 1rem;
+  }
+  #projects > aside div {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+  body {
+    flex-wrap: wrap;
+  }
+  header {
+    position: static;
+    height: fit-content;
+    gap: 2rem;
+    padding: var(--base-padding);
+    padding-bottom: 4rem;
+  }
+  header > nav {
+    display: none;
+  }
+  :root {
+    --base-padding: 3rem
+  }
+  main {
+    padding: 0 var(--base-padding) var(--base-padding) var(--base-padding);
+  }
+  main > img {
+    scale: 1.1;
+  }
+}
+
+[id]::before {
+  content: '';
+  display: block;
+  height:      75px;
+  margin-top: -75px;
+  visibility: hidden;
+}
+
+@media (max-width: 700px) {
+  #hackathons input:not(:checked) + article + label * {
+    transition: 250ms transform;
+    transform: scale(0.8);
+  }
+  
+  #hackathons input:checked + article + label * {
+    transition: 250ms transform;
+    transform: scale(1.01);
+  }
+  
+  #hackathons input:checked + article + label::after {
+    display: none;
+  }
+
+  #hackathons input:not(:checked) + article + label::after {
+    display: none;
+  }
+  
+  #hackathons > div {
+    gap: 0 0.375rem;
+  }
+}
+
+@media (max-width: 500px) {
+  main > img {
+    scale: 0.9;
+  }
+  :root {
+    --base-padding: 1.5rem
+  }
+  #projects > article a {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,41 @@
+@font-face { font-family: Noir; src: url('public/Noir_regular.otf'); } 
+@font-face { font-family: Noir; font-weight: bold; src: url('public/Noir_medium.otf');}
+
+:root {
+  --color-primary: #FF6161;
+  --color-primary-dark: #B54747;
+  --color-secondary-text: #8F8F8F;
+  --color-ambient: #0F0F0F;
+  --base-padding: 12rem;
+}
+
+.noir-bold {
+  font-family: Noir;
+  font-weight: bold;
+}
+
+.noir {
+  font-family: Noir;
+  font-weight: normal;
+}
+
+.spacing-1 {
+  letter-spacing: 0.10rem;
+}
+
+.spacing-2 {
+  letter-spacing: 0.15rem;
+}
+
+.spacing-3 {
+  letter-spacing: 0.20rem;
+}
+
+.text-1 { font-size: 0.875rem; }
+.text-2 { font-size: 1rem; }
+.text-3 { font-size: 1.25rem; }
+.text-4 { font-size: 1.75rem; }
+.text-5 { font-size: 2.25rem; }
+.text-6 { font-size: 3.25rem; }
+.text-7 { font-size: 5rem; }
+.text-8 { font-size: 8rem; }
