@@ -494,6 +494,9 @@ strong {
   #hackathons > div {
     gap: 0 0.375rem;
   }
+  #more > nav * {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -505,5 +508,8 @@ strong {
   }
   #projects > article a {
     padding: 0.5rem;
+  }
+  #more > nav * {
+    font-size: 1rem;
   }
 }
