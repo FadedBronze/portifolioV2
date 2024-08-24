@@ -247,6 +247,25 @@ main > img {
 
 #projects > article {
   margin-bottom: 3rem;
+  position: relative;
+}
+
+#projects > article::after {
+  color: var(--color-primary);
+  font-size: 3.5rem;
+  transform: translateY(50%);
+  content: "01";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#projects > article:nth-of-type(2)::after {
+  content: "02";
+}
+
+#projects > article:nth-of-type(3)::after {
+  content: "03";
 }
 
 #projects > article p {
