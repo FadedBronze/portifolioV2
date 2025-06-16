@@ -313,6 +313,10 @@ strong {
   border-radius: 2px 0px 0px 2px;
 }
 
+#hackathons article > p {
+  line-height: 1.2rem;
+}
+
 #hackathons label:hover::after {
   transition: 250ms width;
   border-radius: 2px 0px 0px 2px;
