@@ -16,12 +16,33 @@
 }
 
 :root {
-  --color-primary: #FF6161;
-  --color-primary-dark: #B54747;
-  --color-secondary-text: #8F8F8F;
-  --color-ambient: #0F0F0F;
+  --color-primary: rgb(25, 0, 55);
+  --color-primary-accent: #8F8F8F;
+  --color-secondary-text: #0F0F0F;
+  --color-ambient: white;
+  --color-primary-title: #FF6161;
+
   --base-padding: 12rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  main > img {
+    display: none;
+  }
+
+  body {
+    background-color: black !important;
+  }
+
+  :root {
+    --color-primary: #FF6161;
+    --color-primary-accent: #B54747;
+    --color-secondary-text: #8F8F8F;
+    --color-ambient: #0F0F0F;
+    --color-primary-title: white;
+  }
+}
+
 
 body {
   font-synthesis: none;

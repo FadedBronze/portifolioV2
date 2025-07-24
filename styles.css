@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: transparent;
   display: flex;
   color: var(--color-secondary-text);
   position: relative;
@@ -49,7 +49,7 @@ header > .intro > span {
 
 header > .intro > h1 {
   transform: translateY(0.25rem) translateX(-0.2rem);
-  color: white;
+  color: var(--color-primary-title);
 }
 
 header > .intro > h2 {
@@ -84,8 +84,10 @@ header > .external {
   gap: 0.5rem;
 }
 
-header > .external img {
+header > .external svg {
   width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary-title);
 }
 
 header > .external > a, header > .external > span {
@@ -100,20 +102,21 @@ main {
 }
 
 main > section > h1 {
-  color: white;
+  color: var(--color-primary-title);
   margin-bottom: calc(3rem - 1rem);
-  position: relative;
   padding-top: 0.3rem;
-  display: flex;
   white-space: nowrap;
   max-width: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 main > section > h1::after {
-  content: "◯";
+  content: "•";
   overflow-x: clip;
-  width: 100%;
-  transform: translateY(0.5rem) translateX(0.75rem);
+  display: block;
+  transform: scaleY(1);
   font-size: 1rem;
   line-height: 1;
   color: var(--color-secondary-text);
@@ -128,10 +131,10 @@ main > section > span {
 
 main > img {
   position: fixed;
-  z-index: -10;
-  right: 0;
-  top: 0;
-  scale: 1.4;
+  z-index: -1;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
 #intro > span {
@@ -143,7 +146,7 @@ main > img {
 }
 
 #projects h2 {
-  color: white;
+  color: var(--color-primary-title);
   margin-bottom: calc(1rem - 0.3rem);
 }
 
@@ -195,8 +198,9 @@ main > img {
   object-fit: cover;
 }
 
-#projects > article a > img {
+#projects > article a > svg {
   height: 1rem;
+  width: 1rem;
   transform: translateY(0.15rem);
 }
 
@@ -217,36 +221,47 @@ main > img {
 }
 
 #projects > article a {
-  display: inline-block;
-  border: 1px solid white;
-  box-sizing: content-box;
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  width: max-content;
+  border: 1px solid var(--color-secondary-text);
+  margin-top: 0.5rem;
+  padding: 0.75rem 0.5rem;
   cursor: pointer;
-  color: white;
-  margin-right: 1rem;
+  color: var(--color-primary-title);
+  margin-right: 0.5rem;
   position: relative;
-  overflow: hidden;
   text-decoration: none;
+  transform: translateX(0.5rem);
+  transition: 150ms transform;
+}
+
+#projects figcaption img {
+  color: var(--color-primary-title);
 }
 
 #projects > article a::after {
   content: "";
   display: block;
   position: absolute;
-  width: 10px;
-  transition: 150ms ease-out transform;
-  transform-origin: left;
+  width: 0.5rem;
+  transition: 150ms transform;
+  transform-origin: right;
   backdrop-filter: invert(1.0);
-  transform: translateX(-75%) skew(5deg);
-  bottom: 0;
-  left: 0;
-  top: 0;
+  bottom: -1px;
+  left: -0.5rem;
+  top: -1px;
+}
+
+#projects > article a:hover {
+  transition: 150ms transform;
+  transform: translateX(0rem);
 }
 
 #projects > article a:hover::after {
-  transition: 150ms ease-out transform;
-  transform: translateX(-75%) skew(5deg) scaleX(16.0);
+  transition: 150ms transform;
+  transform: scaleX(0.0);
 }
 
 #projects > article {
@@ -277,7 +292,7 @@ main > img {
 }
 
 strong {
-  color: white;
+  color: var(--color-primary-title);
 }
 
 #intro > p:not(:last-of-type) {
@@ -300,7 +315,7 @@ strong {
 }
 
 #hackathons label :nth-child(2) {
-  color: var(--color-primary-dark);
+  color: var(--color-primary-accent);
 }
 
 #hackathons label {
@@ -360,7 +375,7 @@ strong {
 }
 
 #hackathons article > h2 {
-  color: white;
+  color: var(--color-primary-title);
   margin-bottom: 0.5rem;
 }
 
@@ -382,7 +397,7 @@ strong {
   justify-content: center;
   align-items: center;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-primary-title);
   position: relative;
   overflow: hidden;
 }
@@ -396,13 +411,11 @@ strong {
   border-radius: 40px;
   top: 50%;
   left: 50%;
-  backdrop-filter: invert(1.0) grayscale(0.8);
-  transition: transform 1s;
+  backdrop-filter: grayscale(0.8);
   transform: translate(-50%, -50%) scale(0);
 }
 
 #more > nav > *:hover::after {
-  transition: transform 1s;
   transform: translate(-50%, -50%) scale(100);
   cursor: pointer;
 }
@@ -411,16 +424,16 @@ strong {
   grid-row: span 2;
   background-color: var(--color-ambient);
   border: 1px solid var(--color-secondary-text);
-  color: white;
+  color: var(--color-primary-title);
 }
 
 #more > nav :nth-child(3) {
-  background-color: white;
+  background-color: var(--color-primary-title);
   color: var(--color-ambient);
 }
 
 #more > nav :nth-child(4) {
-  background-color: white;
+  background-color: var(--color-primary-title);
   color: var(--color-ambient);
 }
 
@@ -428,7 +441,7 @@ strong {
   grid-row: span 2;
   background-color: var(--color-ambient);
   border: 1px solid var(--color-secondary-text);
-  color: white;
+  color: var(--color-primary-title);
 }
 
 #more > nav :nth-child(6) {
@@ -439,39 +452,27 @@ strong {
   grid-column: span 1;
   background-color: var(--color-ambient);
   border: 1px solid var(--color-secondary-text);
-  color: white;
+  color: var(--color-primary-title);
 }
 
 #more > nav :nth-child(8) {
   grid-column: span 2;
-  background-color: white;
+  background-color: var(--color-primary-title);
   color: var(--color-ambient);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 93.75em) {
   :root {
     --base-padding: 4rem
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 68.75em) {
   :root {
     --base-padding: 2rem
   }
-  #projects > article a {
-    padding: 0.60rem 0.362rem 0.55rem 0.362rem;
-    font-size: 0.75rem;
-    display: inline-flex;
-    gap: 0.25rem;
-  }
-  #projects > article a img {
-    margin-top: -0.3rem;
-  }
 }
 
-@media (max-width: 900px) { 
-  #projects > article a {
-    padding: 1.0rem;
-  }
+@media (max-width: 56.25em) { 
   #projects figure {
     display: block;
     height: 28rem;
@@ -502,9 +503,6 @@ strong {
   main {
     padding: 0 var(--base-padding) var(--base-padding) var(--base-padding);
   }
-  main > img {
-    scale: 1.1;
-  }
 }
 
 [id]::before {
@@ -515,7 +513,7 @@ strong {
   visibility: hidden;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75em) {
   #hackathons input:not(:checked) + article + label * {
     transition: 250ms opacity;
   }
@@ -541,7 +539,7 @@ strong {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 31.25em) {
   #hackathons input:checked + article {
     grid-row: 1 / span 6;
     grid-column: 2 / span 3;
@@ -558,14 +556,8 @@ strong {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
-  main > img {
-    scale: 0.9;
-  }
   :root {
     --base-padding: 1.5rem
-  }
-  #projects > article a {
-    padding: 0.5rem;
   }
   #more > nav * {
     font-size: 1rem;
