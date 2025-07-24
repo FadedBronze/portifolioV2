@@ -37,38 +37,86 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-header > .intro > span {
+header .themes {
+  height: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1rem);
+}
+
+header .bottom-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+header .themes button:hover {
+  transition: transform 150ms;
+  transform: scale(1.2);
+}
+
+header .themes button {
+  transition: transform 150ms;
+  height: 100%;
+  border-radius: 25rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border: 1px solid var(--color-primary);
+}
+
+header .themes :nth-child(1) {
+  background-color: rgb(225, 235, 245);
+}
+
+header .themes :nth-child(2) {
+  background-color: black;
+}
+
+header .themes :nth-child(3) {
+  background-color: red;
+}
+
+header .themes :nth-child(4) {
+  background-color: magenta;
+}
+
+header .intro > span {
   display: block;
   color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
 
-header > .intro > h1 {
+header .intro > h1 {
   transform: translateY(0.25rem) translateX(-0.2rem);
   color: var(--color-primary-title);
 }
 
-header > .intro > h2 {
+header .intro > h2 {
   color: var(--color-secondary-text);
 }
 
-header > nav > a:hover {
-  transition: transform 250ms;
-  transform: translateX(1rem);
+header > nav > a:hover, header > nav > a[data-viewing-link-content="active"] {
+  transition: color 250ms;
+  color: var(--color-primary-title);
+  background-color: var(--color-ambient);
+  border-radius: 0.5rem;
 }
 
 header > nav {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
   position: relative;
 }
 
 header > nav > a {
+  transition: color 250ms;
   padding: 1rem;
   margin: -1rem;
   transition: transform 250ms;
@@ -78,19 +126,20 @@ header > nav > a {
   color: var(--color-secondary-text);
 }
 
-header > .external {
+header .external {
   display: flex;
+  height: fit-content;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-header > .external svg {
+header .external svg {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--color-primary-title);
+  color: var(--color-primary);
 }
 
-header > .external > a, header > .external > span {
+header .external > a, header .external > span {
   color: var(--color-primary);
   display: inline-flex;
   align-items: center;
@@ -104,7 +153,6 @@ main {
 main > section > h1 {
   color: var(--color-primary-title);
   margin-bottom: calc(3rem - 1rem);
-  padding-top: 0.3rem;
   white-space: nowrap;
   max-width: 20rem;
   display: flex;
@@ -124,7 +172,7 @@ main > section > h1::after {
 
 main > section > span {
   display: block;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.75rem;
   color: var(--color-primary);
   margin-top: 4rem;
 }
@@ -225,7 +273,7 @@ main > img {
   gap: 0.5rem;
   align-items: baseline;
   width: max-content;
-  border: 1px solid var(--color-secondary-text);
+  border: 1px solid var(--color-primary-title);
   margin-top: 0.5rem;
   padding: 0.75rem 0.5rem;
   cursor: pointer;
@@ -243,6 +291,7 @@ main > img {
 
 #projects > article a::after {
   content: "";
+  background-color: var(--color-primary-title);
   display: block;
   position: absolute;
   width: 0.5rem;

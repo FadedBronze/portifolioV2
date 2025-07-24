@@ -15,34 +15,45 @@
     font-display: swap;
 }
 
-:root {
+:root[data-theme="snow"] {
   --color-primary: rgb(25, 0, 55);
-  --color-primary-accent: #8F8F8F;
+  --color-primary-accent: rgb(20, 0, 42);
   --color-secondary-text: #0F0F0F;
   --color-ambient: white;
-  --color-primary-title: #FF6161;
+  --color-primary-title: rgb(255, 0, 55);
+}
 
+:root {
   --base-padding: 12rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  main > img {
-    display: none;
-  }
-
-  body {
-    background-color: black !important;
-  }
-
-  :root {
-    --color-primary: #FF6161;
-    --color-primary-accent: #B54747;
-    --color-secondary-text: #8F8F8F;
-    --color-ambient: #0F0F0F;
-    --color-primary-title: white;
-  }
+:root:not([data-theme="moon"]) main > img {
+  display: none;
 }
 
+:root[data-theme="hub"] body {
+  background-color: black !important;
+}
+
+:root[data-theme="hub"] {
+  --color-primary: #FF6161;
+  --color-primary-accent: #B54747;
+  --color-secondary-text: #8F8F8F;
+  --color-ambient: #0F0F0F;
+  --color-primary-title: white;
+}
+
+:root[data-theme="neo"] body {
+  background-color: #094074 !important;
+}
+
+:root[data-theme="neo"] {
+  --color-primary: #FFDD4A;
+  --color-primary-accent: #ADDCA5;
+  --color-secondary-text: #5ADBFF;
+  --color-ambient: #3C6997;
+  --color-primary-title: #FE9000;
+}
 
 body {
   font-synthesis: none;

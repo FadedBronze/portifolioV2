@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="hub">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
   </head>
   <body class="noir text-1">
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -38,10 +39,16 @@
         <a href="#hackathons">Hackathons</a>
         <a href="#more">More</a>
       </nav>
-      <div class="external text-2">
-        <span><svg><use href="#discord-icon" /></svg>@fadedbronze</span>
-        <a target="_blank" href="github.com/fadedbronze"><svg><use href="#github-icon" /></svg>github.com/fadedbronze</a>
-        <a target="_blank" href="mailto:thesamyatgautam@gmail.com"><svg><use href="#mail-icon" /></svg>thesamyatgautam@gmail.com</a>
+      <div class="bottom-container">
+        <div class="external text-2">
+          <span><svg><use href="#discord-icon" /></svg>@fadedbronze</span>
+          <a target="_blank" href="github.com/fadedbronze"><svg><use href="#github-icon" /></svg>github.com/fadedbronze</a>
+          <a target="_blank" href="mailto:thesamyatgautam@gmail.com"><svg><use href="#mail-icon" /></svg>thesamyatgautam@gmail.com</a>
+        </div>
+        <div class="themes">
+          <button id="snow"></button>
+          <button id="hub"></button>
+        </div>
       </div>
     </header>
     <main>
@@ -196,7 +203,7 @@
           <a href="https://taymas.itch.io/"  class="text-4" target="_blank">ITCH.IO</a>
           <span class="text-4">(C) SAMYAT GAUTAM 2024</span>
           <a href="https://justfuckingusehtml.com/" class="text-4">Use HTML</a>
-          <span class="text-4">Made with ❤️ without JS</span>
+          <span class="text-4">Made with ❤️</span>
         </nav>
       </section>
     </main>
