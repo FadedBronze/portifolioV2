@@ -26,17 +26,3 @@ observer.observe(intro);
 observer.observe(projects);
 observer.observe(hackathons);
 observer.observe(more);
-
-const themesContainer = document.querySelector("header .themes");
-console.log(themesContainer);
-const themes = themesContainer.querySelectorAll("*") ?? [];
-
-themes.forEach((theme) => {
-  theme.addEventListener('click', () => {
-    console.log(theme.id);
-    document.documentElement.setAttribute('data-theme', theme.id);
-  })
-})
-
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-document.documentElement.setAttribute('data-theme', prefersDark ? 'hub' : 'snow');

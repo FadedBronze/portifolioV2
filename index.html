@@ -45,40 +45,78 @@
           <a target="_blank" href="github.com/fadedbronze"><svg><use href="#github-icon" /></svg>github.com/fadedbronze</a>
           <a target="_blank" href="mailto:thesamyatgautam@gmail.com"><svg><use href="#mail-icon" /></svg>thesamyatgautam@gmail.com</a>
         </div>
-        <div class="themes">
-          <button id="snow"></button>
-          <button id="hub"></button>
-        </div>
       </div>
     </header>
     <main>
       <img src="public/glow.svg" />
       <section id="intro" class="text-2">
-        <span class="text-3">Hello there!</span>
+        <span class="text-3">Hello!</span>
         <h1 class="noir text-5">ABOUT ME</h1>
-        <p>I’m a <strong>web developer</strong> who likes to <strong>write game systems code</strong> in my spare time.</p>
-        <p>Currently, I am learning about physics while building the <strong>chsl physics engine.</strong></p>
-        <p>Outside of the terminal I like to play cards, go on walks, and draw.</p>
+        <p>I have been <strong>programming</strong> for just over <strong>half a decade.</strong></p>
+        <p>I've learned to write websites and games.</p>
+        <p>And I am motivated to write <strong>quality</strong> software.</p>
       </section>
       <section id="projects">
         <span class="text-3">Featured</span>
         <h1 class="noir text-5">PROJECTS</h1>
 
         <article>
+          <h2 class="text-4">Hexabomb</h2>
+          <ul>
+            <li>Odin</li>
+            <li>Raylib</li>
+          </ul>
+          <figure>
+            <video loop="" autoplay=true muted="" width="100%" poster="public/hexabomb.gif">
+              <source src="public/videos/hexabomb_640.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              <p>A <strong>multiplayer LAN strategy game</strong> I am working on right now.</p>
+              <p>It uses a very simple <strong>custom layout system</strong>, supports saving, editing, and loading maps.</p>
+              <a target="_blank" target="_blank" href="https://github.com/FadedBronze/Hexabomb">
+                <svg><use href="#external-icon" /><svg><span>Download</span>
+              </a>
+              <a target="_blank" target="_blank" href="https://github.com/FadedBronze/Hexabomb">
+                <svg><use href="#github-icon" /><svg><span>Source code</span>
+              </a>
+            </figcaption> 
+          </figure>
+        </article>
+
+        <article>
           <h2 class="text-4">Chsl</h2>
           <ul>
             <li>Rust</li>
-            <li>Dependency-free!</li>
           </ul>
           <figure>
-            <img src="public/chsl.png">
+            <video loop="" autoplay=true muted="" width="100%" poster="public/chsl.png">
+              <source src="public/videos/chsl_640.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <figcaption>
-              <p>My plan is to make a game <strong>composed primarily of code written by me</strong> and to do that I needed to <strong>roll my own physics.</strong></p>
-              <p>That is why I am creating <strong>Chsl, a 2D rigidbody physics library</strong> currently supporting <strong>polygons, circles, and constraints.</strong></p>
-              <a target="_blank" href="#">
-                <svg><use href="#external-icon" /><svg><span>View demos</span>
-              </a>
+              <p>A Physics library I wrote to better understand how to <strong>write Rust and learn physics</strong></p>
+              <p>It supports <strong>joints</strong> like rotation and position joints implemented through <strong>mathematic constraints.</strong></p>
               <a target="_blank" href="https://github.com/FadedBronze/chsl">
+                <svg><use href="#github-icon" /><svg><span>Source code</span>
+              </a>
+            </figcaption> 
+          </figure>
+        </article>
+        
+        <article>
+          <h2 class="text-4">Caramel</h2>
+          <ul>
+            <li>Rust</li>
+          </ul>
+          <figure>
+            <div>
+              <img src="public/caramel.png">
+            </div>
+            <figcaption>
+              <p>A small compiler supporting <strong>arethmetic operations</strong> that outputs to <strong>NASM.</strong></p>
+              <p>Making it, I learned about <strong>abstract syntax trees</strong> and how <strong>the stack</strong> works.</p>
+              <a target="_blank" href="https://github.com/FadedBronze/caramel">
                 <svg><use href="#github-icon" /><svg><span>Source code</span>
               </a>
             </figcaption> 
@@ -92,10 +130,13 @@
             <li>CanvasAPI</li>
           </ul>
           <figure>
-            <img src="public/pixili.png">
+            <video loop="" autoplay=true muted="" width="100%" poster="public/pixili.png">
+              <source src="public/videos/pixili_640.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <figcaption>
-              <p>Pixili was <strong>my answer</strong> to the difficulties of compiling Aseprite from source (no disrespect I still like Asprite more).</p>
-              <p>The software includes basic features like the <strong>“paint bucket”</strong> tool, <strong>drawing lines</strong>, and switching colors, and more complex features like <strong>layers and undo.</strong></p>
+              <p>I wanted to see if I could recreate a <strong>pixel art tool</strong> like aseprite.</p>
+              <p>And the result was an minimal <strong>dynamic</strong> interface supporting the <strong>paint bucket</strong> and <strong>line drawing tools</strong> and <strong>layers.</strong></p>
               <a target="_blank" href="https://pixili.netlify.app">
                 <svg><use href="#external-icon" /><svg><span>View page</span>
               </a>
@@ -106,38 +147,13 @@
           </figure>
         </article>
 
-        <article>
-          <h2 class="text-4">Watchdog</h2>
-          <ul>
-            <li>ReactJS</li>
-            <li>Framer Motion</li>
-            <li>OpenAI API</li>
-            <li>Web Speech API</li>
-            <li>TailwindCSS</li>
-            <li>Flask</li>
-          </ul>
-          <figure>
-            <img src="public/watchdog.png">
-            <figcaption>
-              <p>Watchdog was created for <strong>StarterHacks under 48 hours</strong> our project was titled “Most Promising” hack.</p>
-              <p>Watchdog is software we made to give you an indicator as to <strong>how likely a call is to be scam.</strong></p>
-              <a target="_blank" target="_blank" href="https://antifreak.netlify.app/">
-                <svg><use href="#external-icon" /><svg><span>View page</span>
-              </a>
-              <a target="_blank" target="_blank" href="https://github.com/FadedBronze/StarterHacks">
-                <svg><use href="#github-icon" /><svg><span>Source code</span>
-              </a>
-            </figcaption> 
-          </figure>
-        </article>
-
         <aside>
           <h2 class="text-4">More Projects</h2>
           <div>
-            <a target="_blank" href="https://github.com/FadedBronze/bombcakes"><img src="public/bombcakes.png"></a>
             <a target="_blank" href="https://github.com/FadedBronze/glSnake"><img src="public/glsnake.png"></a>
             <a target="_blank" href="https://samyatv1.netlify.app"><img src="public/versionone.png"></a>
-            <a target="_blank" href="https://ai-que-cards.vercel.app/"><img src="public/soundcard.png"></a>
+            <a target="_blank" href="https://github.com/FadedBronze/bombcakes"><img src="public/bombcakes.gif"></a>
+            <a target="_blank" href="https://mechawolves.ca"><img src="public/3560frc.gif"></a>
             <a target="_blank" href="https://fadedbronze.github.io/codewell-hosterr-challenge/"><img src="public/hosterr.png"></a>
             <a target="_blank" href="https://fadedbronze.github.io/codewell-ondeck-challenge/"><img src="public/ondeck.png"></a>
           </div>
@@ -152,11 +168,11 @@
           <input checked name="hackathons" type="radio" id="featured-1">
           <article>
             <h2 class="text-5">Scrapyard Toronto</h2>
-            <p class="text-2">
-            <p class="text-2">This was an interesting and fun time I might write a blog on it at some point. 
-            For now I'll note that I came from scrapyard brampton which merged with toronto.</p> 
-            <p class="text-2">I did dev work for both scrapyard brampton and toronto and made an email bot that raised $200 using google apps script which I learned from a workshop at either Hawkhacks or GDSC its hard to say which one though because they were 1 week apart.</p>
-            <p class="text-2">Both were very fun though.</p>
+            <p class="text-2">I was one of the organizers for scrapyard toronto.</p> 
+            <p class="text-2">During the event, I ran a <strong>workshop</strong>, did admin, and <strong>helped people</strong> get thier projects up</p> 
+            <p class="text-2">And before the event, I built an <strong>automated email system</strong> and worked on the website</p>
+            <p class="text-2">Overall, the event was amazing there was lots of interesting projects, and many memories were made.</p>
+            <a href="https://scrapyard.hackclub.com/toronto"><strong>https://scrapyard.hackclub.com/toronto</strong></a>
           </article>
           <label class="text-3" for="featured-1">
             <span>Scrapyard Toronto</span>
@@ -166,9 +182,9 @@
           <input name="hackathons" type="radio" id="featured-2">
           <article>
             <h2 class="text-5">Hawk Hacks</h2>
-            <p class="text-2">I had a great time at hawk hacks. I threw up eating noodles, stayed up late working with my buddies, and bragged about not drinking monster. </p>
-            <p class="text-2">Our project was dev-stats which compiled metrics from github and created a profile you could use to determine whether you thought someone would be a good fit for your hackathon team. We went overboard and included a feature which encoded all the data into the url which pushed us really close to the deadline.</p> 
-            <p class="text-2">Overall, between that and the corndog place 10/10 experience.</p>
+            <p class="text-2">At hawk hacks, we built dev-stats a app that would compile information about a developer that could be used to find good teammates</p>
+            <p class="text-2">We had <strong>url cached profiles</strong> that you could easily share and were considering QR codes</p> 
+            <a href="https://github.com/Dragola/dev-stats"><strong>https://github.com/Dragola/dev-stats</strong></a>
           </article>
           <label class="text-3" for="featured-2">
             <span>Hawk Hacks</span>
@@ -178,13 +194,11 @@
           <input name="hackathons" type="radio" id="featured-3">
           <article>
             <h2 class="text-5">Starter Hacks</h2>
-            <p class="text-2">
-              At StarterHacks, we built a GPT-wrapper, but you know what? It turned out pretty good. 
-              Initially, we were contemplating different themes like environment, education, ect, but me and my friend, having previously watched a pleasant green video, came to scammers.
-            </p>
-            <p class="text-2">
-              My favorite part was the UI partly because I primarily worked on it but also I liked it because the red highlight text plus the audio visualization gave it hacker vibes. The food was also amazing. The only complaint is we have not recieved any updates on prizes. I should probably mention we won "Most Promising."  
-            </p>
+            <p class="text-2">At starter hacks, we built a <strong>scam call detection service</strong> -- we called it antifreak.</p>
+            <p class="text-2">I was rocking a chromebook because I had cracked my laptop screen and was responsible for making the UI.</p>
+            <p class="text-2">We ended up winning in the most promising category.</p>
+            <a href="antifreak.netlify.app"><strong>antifreak.netlify.app</strong></a><span>  | </span>
+            <a href="https://github.com/FadedBronze/StarterHacks"><strong>https://github.com/FadedBronze/StarterHacks</strong></a>
           </article>
           <label class="text-3" for="featured-3">
             <span>Starter Hacks</span>
@@ -201,7 +215,7 @@
           <a href="https://samyatv1.netlify.app/" class="text-4" target="_blank">VERSION 1</a>
           <a href="mailto:thesamyatgautam@gmail.com" class="text-4" target="_blank">EMAIL</a>
           <a href="https://taymas.itch.io/"  class="text-4" target="_blank">ITCH.IO</a>
-          <span class="text-4">(C) SAMYAT GAUTAM 2024</span>
+          <span class="text-4">(C) SAMYAT GAUTAM 2026</span>
           <a href="https://justfuckingusehtml.com/" class="text-4">Use HTML</a>
           <span class="text-4">Made with ❤️</span>
         </nav>

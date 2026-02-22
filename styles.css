@@ -234,7 +234,6 @@ main > img {
 #projects > aside div img:not(:hover) {
   transition: filter 125ms ease-in, transform 250ms ease-in;
   filter: grayscale(100%) brightness(0.6) sepia(100%) hue-rotate(-55deg) saturate(500%);
-  transform: scale(1.5);
 }
 
 #projects > aside div img {
@@ -255,17 +254,25 @@ main > img {
 #projects figure {
   display: block;
   width: 100%;
-  height: 16rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 
-#projects figure > img {
+#projects figure > div > img {
   border: 1px solid var(--color-ambient);
   object-fit: cover;
   width: 100%;
-  height: 16rem;
+}
+  
+#projects figure > :nth-child(1) {
+    border-radius: 0.5rem;
+}
+
+#projects figure > div {
+  overflow-y: scroll;
+  overflow-x: clip;
+  height: 20rem;
 }
 
 #projects > article a {
@@ -382,8 +389,10 @@ strong {
   border-radius: 2px 0px 0px 2px;
 }
 
-#hackathons article > p {
+#hackathons article > p, #hackathons article > a {
+    color: var(--color-primary-accent)
   line-height: 1.2rem;
+  font-size: 1rem;
 }
 
 #hackathons label:hover::after {
@@ -526,7 +535,7 @@ strong {
     display: block;
     height: 28rem;
   }
-  #projects figure > img {
+  #projects figure > :nth-child(1) {
     height: 16rem;
     margin-bottom: 1rem;
   }
