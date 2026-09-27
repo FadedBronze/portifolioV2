@@ -507,7 +507,7 @@ strong {
 }
 
 #more > nav :nth-child(7) {
-  grid-column: span 1;
+  grid-column: span 3;
   background-color: var(--color-ambient);
   border: 1px solid var(--color-secondary-text);
   color: var(--color-primary-title);
